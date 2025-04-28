@@ -36,7 +36,6 @@ if __name__ == "__main__":
         plaintext = input("Enter text to encrypt: ")
         encrypted = des_encrypt(key, plaintext)
         print(f"Encrypted (Hex): {encrypted}")
-
     elif action == "D":
         encrypted_hex_text = input("Enter hex-encoded text to decrypt: ")
         decrypted = des_decrypt(key, encrypted_hex_text)
