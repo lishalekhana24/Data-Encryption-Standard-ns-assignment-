@@ -22,8 +22,6 @@ def des_decrypt(key, encrypted_hex_text):
     encrypted_text = binascii.unhexlify(encrypted_hex_text)
     decrypted_text = des.decrypt(encrypted_text).decode().rstrip()
     return decrypted_text
-
-# Improved dynamic user interaction with validation
 if __name__ == "__main__":
     while True:
         action = input("Do you want to (E)ncrypt or (D)ecrypt? ").strip().upper()
@@ -31,14 +29,12 @@ if __name__ == "__main__":
             break  # Valid input, exit loop
         else:
             print("Invalid choice! Please enter 'E' for encryption or 'D' for decryption.")
-
     while True:
         key = input("Enter an 8-character key: ").encode()
         if len(key) == 8:
             break  # Valid key, exit loop
         else:
             print("Error: Key must be exactly 8 bytes long!")
-
     if action == "E":
         plaintext = input("Enter text to encrypt: ")
         encrypted = des_encrypt(key, plaintext)
