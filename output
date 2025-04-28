@@ -1,11 +1,1 @@
-C:\Users\Admin\OneDrive\Desktop\ns assignment>python des.py
-Do you want to (E)ncrypt or (D)ecrypt? e
-Enter an 8-character key: abcdefgh
-Enter text to encrypt: network security assignment
-Encrypted (Hex): e5bebf8e5d00951f553b5119d550a45673fab1a873ffaa61bafa2e75e28fe562
 
-C:\Users\Admin\OneDrive\Desktop\ns assignment>python des.py
-Do you want to (E)ncrypt or (D)ecrypt? d
-Enter an 8-character key: abcdefgh
-Enter hex-encoded text to decrypt: e5bebf8e5d00951f553b5119d550a45673fab1a873ffaa61bafa2e75e28fe562
-Decrypted: network security assignment
