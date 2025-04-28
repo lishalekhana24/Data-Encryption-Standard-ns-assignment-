@@ -20,8 +20,6 @@ def des_decrypt(key, encrypted_hex_text):
     encrypted_text = binascii.unhexlify(encrypted_hex_text)
     decrypted_text = des.decrypt(encrypted_text).decode().rstrip()
     return decrypted_text
-
-# Improved dynamic user interaction with validation
 if __name__ == "__main__":
     while True:
         action = input("Do you want to (E)ncrypt or (D)ecrypt? ").strip().upper()
