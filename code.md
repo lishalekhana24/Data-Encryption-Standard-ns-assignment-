@@ -13,7 +13,6 @@ def des_encrypt(key, text):
     padded_text = pad(text)
     encrypted_text = des.encrypt(padded_text.encode())
     return binascii.hexlify(encrypted_text).decode()
-
 def des_decrypt(key, encrypted_hex_text):
     """ Decrypt hex-encoded text using DES """
     des = DES.new(key, DES.MODE_ECB)
@@ -27,14 +26,12 @@ if __name__ == "__main__":
             break  # Valid input, exit loop
         else:
             print("Invalid choice! Please enter 'E' for encryption or 'D' for decryption.")
-
     while True:
         key = input("Enter an 8-character key: ").encode()
         if len(key) == 8:
             break  # Valid key, exit loop
         else:
             print("Error: Key must be exactly 8 bytes long!")
-
     if action == "E":
         plaintext = input("Enter text to encrypt: ")
         encrypted = des_encrypt(key, plaintext)
